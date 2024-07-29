@@ -87,8 +87,7 @@ CREATE TABLE Suppliers (
     Country VARCHAR2(50),
     Phone VARCHAR2(20)
 );
-
--- Création de la table Customers
+=
 CREATE TABLE Customers (
     CustomerID VARCHAR2(10) PRIMARY KEY,
     CompanyName VARCHAR2(50),
@@ -103,14 +102,12 @@ CREATE TABLE Customers (
     Fax VARCHAR2(20)
 );
 
--- Création de la table Shippers
 CREATE TABLE Shippers (
     ShipperID VARCHAR2(10) PRIMARY KEY,
     CompanyName VARCHAR2(50),
     Phone VARCHAR2(20)
 );
 
--- Création de la table Employees
 CREATE TABLE Employees (
     EmployeeID VARCHAR2(10) PRIMARY KEY,
     LastName VARCHAR2(50),
@@ -132,7 +129,6 @@ CREATE TABLE Employees (
     FOREIGN KEY (ReportsTo) REFERENCES Employees(EmployeeID)
 );
 
--- Création de la table Categories
 CREATE TABLE Categories (
     CategoryID NUMBER PRIMARY KEY,
     CategoryName VARCHAR2(50),
@@ -140,7 +136,6 @@ CREATE TABLE Categories (
     Picture BLOB
 );
 
--- Création de la table Products
 CREATE TABLE Products (
     ProductID NUMBER PRIMARY KEY,
     ProductName VARCHAR2(50),
@@ -156,7 +151,6 @@ CREATE TABLE Products (
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 );
 
--- Création de la table Orders
 CREATE TABLE Orders (
     OrderID VARCHAR2(10) PRIMARY KEY,
     CustomerID VARCHAR2(10),
